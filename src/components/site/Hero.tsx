@@ -71,7 +71,7 @@ export function Hero() {
               <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
                 Toll-Free Support
               </span>
-              <a href="tel:+18559438332" className="font-display text-2xl font-extrabold sm:text-3xl">
+              <a href="tel:+18008789170" className="font-display text-2xl font-extrabold sm:text-3xl">
                 {PHONE_DISPLAY}
               </a>
             </div>

@@ -73,14 +73,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Toll-free satellite radio activation, signal and subscription support at (855) 943-8332.",
+          "Toll-free satellite radio activation, signal and subscription support at (800) 878-9170.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Satellite Car Audio Support & Activation" },
       { name: "twitter:title", content: "Satellite Car Audio Support & Activation" },
-      { property: "og:description", content: "Toll-free satellite radio activation, signal and subscription support at (855) 943-8332." },
-      { name: "twitter:description", content: "Toll-free satellite radio activation, signal and subscription support at (855) 943-8332." },
+      { property: "og:description", content: "Toll-free satellite radio activation, signal and subscription support at (800) 878-9170." },
+      { name: "twitter:description", content: "Toll-free satellite radio activation, signal and subscription support at (800) 878-9170." },
     ],
   }),
 

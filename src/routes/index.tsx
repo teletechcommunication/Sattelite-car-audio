@@ -10,9 +10,9 @@ import {
 } from "@/components/site/Sections";
 import { Faq, FinalCta, Footer, RoutingHub } from "@/components/site/Sections2";
 
-const TITLE = "Satellite Car Audio Support & Activation | Call (855) 943-8332";
+const TITLE = "Satellite Car Audio Support & Activation | Call (800) 878-9170";
 const DESCRIPTION =
-  "Satellite Car Audio support for radio activation, signal refresh, subscriptions, billing, installation and marine radios. Toll-free 24/7 help at (855) 943-8332.";
+  "Satellite Car Audio support for radio activation, signal refresh, subscriptions, billing, installation and marine radios. Toll-free 24/7 help at (800) 878-9170.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
           name: "Satellite Car Audio",
           url: "https://satellitecaraudio.com",
           description: DESCRIPTION,
-          telephone: "+1-855-943-8332",
+          telephone: "+1-800-878-9170",
           areaServed: "US",
           openingHours: "Mo-Su 00:00-23:59",
         }),

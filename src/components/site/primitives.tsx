@@ -2,8 +2,8 @@ import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export const PHONE_DISPLAY = "(855) 943-8332";
-export const PHONE_HREF = "tel:+18559438332";
+export const PHONE_DISPLAY = "(800) 878-9170";
+export const PHONE_HREF = "tel:+18008789170";
 export const BRAND = "Satellite Car Audio";
 
 export function Reveal({
