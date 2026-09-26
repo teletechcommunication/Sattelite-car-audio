@@ -38,7 +38,7 @@ const SERVICES = [
   {
     icon: BadgePercent,
     title: "No Direct Fee",
-    body: "IX Support does not charge customers directly for this connection guidance.",
+    body: "Satellite Car Audio does not charge customers directly for this connection guidance.",
   },
   {
     icon: Wrench,
@@ -97,10 +97,10 @@ export function StoreSection() {
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 max-w-xl text-muted-foreground">
-                IX Support helps customers explore eligible new satellite radio connections. You do
-                not pay IX Support directly. If an eligible new connection is completed, IX Support
-                may receive a commission from the third party that fulfills it. To discuss your
-                options, call{" "}
+                Satellite Car Audio helps customers explore eligible new satellite radio
+                connections. You do not pay Satellite Car Audio directly. If an eligible new
+                connection is completed, Satellite Car Audio may receive a commission from the third
+                party that fulfills it. To discuss your options, call{" "}
                 <a href={PHONE_HREF} className="font-semibold text-foreground">
                   {PHONE_DISPLAY}
                 </a>
@@ -160,8 +160,8 @@ export function InstantHelpSection() {
         <Reveal delay={0.12}>
           <p className="mx-auto mt-7 max-w-2xl text-muted-foreground">
             Tell us about your vehicle, receiver, or listening needs. We can help you prepare for a
-            potential new connection with a third-party provider. IX Support does not charge you
-            directly for this guidance.
+            potential new connection with a third-party provider. Satellite Car Audio does not
+            charge you directly for this guidance.
           </p>
         </Reveal>
 
@@ -180,7 +180,7 @@ export function InstantHelpSection() {
               No direct fee · Commission disclosed if a connection is completed
             </p>
             <div className="mt-7">
-              <CallButton label="Call IX Support" />
+              <CallButton label="Call Satellite Car Audio" />
             </div>
           </div>
         </Reveal>
@@ -204,8 +204,8 @@ export function SupportNumberSection() {
                 <p className="mt-4 text-muted-foreground">
                   Call <span className="font-semibold text-foreground">{PHONE_DISPLAY}</span> to
                   explore a potential new satellite radio connection. You are not charged directly
-                  by IX Support. If a connection is completed, IX Support may receive a commission
-                  from the third party that fulfills it.
+                  by Satellite Car Audio. If a connection is completed, Satellite Car Audio may
+                  receive a commission from the third party that fulfills it.
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-3">
@@ -258,10 +258,12 @@ export function VoucherSection() {
               >
                 Clear compensation disclosure
               </motion.span>
-              <h2 className="mt-6 text-3xl font-extrabold sm:text-4xl">How IX Support is paid</h2>
+              <h2 className="mt-6 text-3xl font-extrabold sm:text-4xl">
+                How Satellite Car Audio is paid
+              </h2>
               <p className="mt-3 text-muted-foreground">
-                IX Support does not charge customers directly. We may receive a commission from a
-                third party when an eligible new connection is completed after our referral.
+                Satellite Car Audio does not charge customers directly. We may receive a commission
+                from a third party when an eligible new connection is completed after our referral.
               </p>
 
               <p className="mt-5 text-xs text-muted-foreground">
@@ -271,7 +273,7 @@ export function VoucherSection() {
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <CallButton label={`Call IX Support · ${PHONE_DISPLAY}`} />
+                <CallButton label={`Call Satellite Car Audio · ${PHONE_DISPLAY}`} />
               </div>
             </div>
           </div>
@@ -298,8 +300,8 @@ export function MarineSection() {
             <Reveal delay={0.12}>
               <p className="mt-5 max-w-xl text-muted-foreground">
                 Explore potential new connection considerations for compatible satellite radio
-                equipment used in boats and marine environments. No direct fee is charged by IX
-                Support for this guidance.
+                equipment used in boats and marine environments. No direct fee is charged by IX Car
+                Audio for this guidance.
               </p>
             </Reveal>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -322,7 +324,7 @@ export function MarineSection() {
                 {
                   icon: Headphones,
                   t: "Compensation disclosure",
-                  d: "IX Support may receive a commission after an eligible new connection.",
+                  d: "Satellite Car Audio may receive a commission after an eligible new connection.",
                 },
               ].map((m, i) => (
                 <Reveal key={m.t} delay={0.06 * i}>

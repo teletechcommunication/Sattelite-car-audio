@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 
 export const PHONE_DISPLAY = "(800) 878-9170";
 export const PHONE_HREF = "tel:+18008789170";
-export const BRAND = "IX Support";
+export const BRAND = "Satellite Car Audio";
+export const PARENT_COMPANY = "IX Support";
 
 export function Reveal({
   children,

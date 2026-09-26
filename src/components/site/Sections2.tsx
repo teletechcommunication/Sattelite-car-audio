@@ -14,7 +14,15 @@ import {
   Wrench,
 } from "lucide-react";
 import ctaImg from "@/assets/final-cta-highway.jpg";
-import { BRAND, CallButton, PHONE_DISPLAY, PHONE_HREF, Reveal, SectionLabel } from "./primitives";
+import {
+  BRAND,
+  CallButton,
+  PARENT_COMPANY,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  Reveal,
+  SectionLabel,
+} from "./primitives";
 
 const HUB = [
   { icon: Power, t: "New Connection" },
@@ -55,7 +63,7 @@ export function RoutingHub() {
                 <span className="mt-6 block">
                   <span className="block text-base font-bold">{h.t}</span>
                   <span className="mt-1 block text-sm text-muted-foreground">
-                    No direct fee from IX Support
+                    No direct fee from Satellite Car Audio
                   </span>
                 </span>
               </motion.a>
@@ -70,27 +78,27 @@ export function RoutingHub() {
 const FAQS = [
   {
     cat: "Contact",
-    q: "Does IX Support charge me directly?",
-    a: "No. IX Support does not charge customers directly for connection guidance provided through this website.",
+    q: "Does Satellite Car Audio charge me directly?",
+    a: "No. Satellite Car Audio does not charge customers directly for connection guidance provided through this website.",
   },
   {
     cat: "Compensation",
-    q: "How does IX Support earn money?",
-    a: "If an eligible new connection is completed after a referral through IX Support, we may receive a commission from the third party that fulfills the connection. This does not create a direct customer charge from IX Support.",
+    q: "How does Satellite Car Audio earn money?",
+    a: "If an eligible new connection is completed after a referral through Satellite Car Audio, we may receive a commission from the third party that fulfills the connection. This does not create a direct customer charge from Satellite Car Audio.",
   },
   {
     cat: "Connection",
-    q: "What can IX Support help me with?",
-    a: `Call IX Support at ${PHONE_DISPLAY} to discuss potential new satellite radio connections, equipment details, and the next steps a third-party provider may require.`,
+    q: "What can Satellite Car Audio help me with?",
+    a: `Call Satellite Car Audio at ${PHONE_DISPLAY} to discuss potential new satellite radio connections, equipment details, and the next steps a third-party provider may require.`,
   },
   {
     cat: "Providers",
     q: "Who completes my connection?",
-    a: "A third-party provider fulfills the connection and determines its own pricing, eligibility, service terms, account approval, and availability. IX Support does not control those decisions.",
+    a: "A third-party provider fulfills the connection and determines its own pricing, eligibility, service terms, account approval, and availability. Satellite Car Audio does not control those decisions.",
   },
   {
     cat: "Existing Accounts",
-    q: "Can IX Support change or fix my existing account?",
+    q: "Can Satellite Car Audio change or fix my existing account?",
     a: "No. Existing account changes, service issues, billing questions, and provider-specific support are handled by the applicable provider directly.",
   },
 ];
@@ -104,10 +112,10 @@ export function Faq() {
           <div className="text-center">
             <SectionLabel>Frequently Asked Questions</SectionLabel>
             <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
-              Quick answers about IX Support
+              Quick answers about Satellite Car Audio
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Call IX Support to explore a potential new connection at{" "}
+              Call Satellite Car Audio to explore a potential new connection at{" "}
               <a href={PHONE_HREF} className="font-semibold text-foreground">
                 {PHONE_DISPLAY}
               </a>
@@ -189,8 +197,9 @@ export function FinalCta() {
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            Explore eligible new satellite radio connection options. IX Support does not charge you
-            directly and may receive a commission only when an eligible connection is completed.
+            Explore eligible new satellite radio connection options. Satellite Car Audio does not
+            charge you directly and may receive a commission only when an eligible connection is
+            completed.
           </p>
         </Reveal>
         <Reveal delay={0.14}>
@@ -209,7 +218,7 @@ export function FinalCta() {
         <Reveal delay={0.26}>
           <ul className="mt-9 flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
             {[
-              "No direct IX Support fee",
+              "No direct Satellite Car Audio fee",
               "Commission disclosed",
               "Provider sets terms",
               "Connection guidance",
@@ -239,8 +248,8 @@ export function Footer() {
               <span className="font-display text-lg font-extrabold">{BRAND}</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              No-cost guidance for potential new satellite radio connections. IX Support may receive
-              a commission from a third party when an eligible connection is completed.
+              No-cost guidance for potential new satellite radio connections. Satellite Car Audio
+              may receive a commission from a third party when an eligible connection is completed.
             </p>
             <a
               href={PHONE_HREF}
@@ -307,9 +316,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-7">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            IX Support, located at 3400 N Alma School Rd, Chandler, AZ 85224-8012, provides no-cost
-            guidance for potential new satellite radio connections. Customers do not pay IX Support
-            directly. IX Support may receive a commission from a third party when an eligible new
+            Satellite Car Audio is operated by {PARENT_COMPANY}, located at 3400 N Alma School Rd,
+            Chandler, AZ 85224-8012. Satellite Car Audio provides no-cost guidance for potential new
+            satellite radio connections. Customers do not pay Satellite Car Audio directly.
+            Satellite Car Audio may receive a commission from a third party when an eligible new
             connection is completed. Provider pricing, eligibility, terms, and service decisions are
             set by the applicable provider. All trademarks belong to their respective owners.
           </p>

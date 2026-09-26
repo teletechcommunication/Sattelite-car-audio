@@ -8,7 +8,7 @@ import { CallButton, PHONE_DISPLAY, Reveal } from "./primitives";
 const FLOATING = [
   { icon: Radio, title: "Connection", value: "New service options", tone: "success" },
   { icon: SignalHigh, title: "Guidance", value: "Next-step help", tone: "primary" },
-  { icon: CheckCircle2, title: "Your cost", value: "No IX Support fee", tone: "success" },
+  { icon: CheckCircle2, title: "Your cost", value: "No Satellite Car Audio fee", tone: "success" },
   { icon: Clock, title: "Disclosure", value: "Commission funded", tone: "primary" },
 ] as const;
 
@@ -50,9 +50,10 @@ export function Hero() {
 
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              IX Support helps people explore eligible new satellite radio connections and prepare
-              for the next step. You do not pay IX Support directly. If an eligible new connection
-              is completed, we may receive a commission from the third party that fulfills it.
+              Satellite Car Audio helps people explore eligible new satellite radio connections and
+              prepare for the next step. You do not pay Satellite Car Audio directly. If an eligible
+              new connection is completed, we may receive a commission from the third party that
+              fulfills it.
             </p>
           </Reveal>
 
@@ -78,12 +79,14 @@ export function Hero() {
 
           <Reveal delay={0.36}>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground">
-              {["No fee from IX Support", "Commission disclosed", "Phone guidance"].map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <ShieldCheck className="size-4 shrink-0 text-primary-glow" aria-hidden />
-                  {t}
-                </li>
-              ))}
+              {["No fee from Satellite Car Audio", "Commission disclosed", "Phone guidance"].map(
+                (t) => (
+                  <li key={t} className="flex items-center gap-2">
+                    <ShieldCheck className="size-4 shrink-0 text-primary-glow" aria-hidden />
+                    {t}
+                  </li>
+                ),
+              )}
             </ul>
           </Reveal>
         </div>

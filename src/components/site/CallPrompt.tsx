@@ -62,7 +62,7 @@ export function CallPrompt() {
           <Radio className="size-7" aria-hidden />
         </div>
         <p className="mt-5 text-xs font-bold tracking-[0.18em] text-primary uppercase">
-          IX Support
+          Satellite Car Audio
         </p>
         <h2
           id="call-prompt-title"
@@ -74,13 +74,13 @@ export function CallPrompt() {
           id="call-prompt-description"
           className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground"
         >
-          You do not pay IX Support directly. If an eligible new connection is completed, we may
-          receive a commission from the third party that fulfills it.
+          You do not pay Satellite Car Audio directly. If an eligible new connection is completed,
+          we may receive a commission from the third party that fulfills it.
         </p>
         <a
           href={PHONE_HREF}
           className="mt-7 flex w-full items-center justify-between rounded-lg bg-[image:var(--gradient-primary)] px-5 py-4 text-primary-foreground shadow-glow transition-transform hover:scale-[1.01]"
-          aria-label={`Call IX Support at ${PHONE_DISPLAY}`}
+          aria-label={`Call Satellite Car Audio at ${PHONE_DISPLAY}`}
         >
           <span className="flex items-center gap-3">
             <span className="grid size-10 place-items-center rounded-full bg-primary-foreground/15">
@@ -98,7 +98,7 @@ export function CallPrompt() {
           <ShieldCheck className="size-5" aria-hidden />
         </a>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          No direct customer charge from IX Support
+          No direct customer charge from Satellite Car Audio
         </p>
       </section>
     </div>

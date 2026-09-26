@@ -11,9 +11,9 @@ import {
 } from "@/components/site/Sections";
 import { Faq, FinalCta, Footer, RoutingHub } from "@/components/site/Sections2";
 
-const TITLE = "IX Support | No-Cost Satellite Radio Connection Guidance";
+const TITLE = "Satellite Car Audio | No-Cost Connection Guidance";
 const DESCRIPTION =
-  "IX Support provides no-cost guidance for eligible new satellite radio connections. Customers do not pay IX Support directly; IX Support may receive a commission when an eligible connection is completed.";
+  "Satellite Car Audio provides no-cost guidance for eligible new satellite radio connections. Customers do not pay Satellite Car Audio directly; it may receive a commission when an eligible connection is completed.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://satellitecaraudio.com/" },
-      { property: "og:site_name", content: "IX Support" },
+      { property: "og:site_name", content: "Satellite Car Audio" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -41,14 +41,14 @@ export const Route = createFileRoute("/")({
             {
               "@type": "WebSite",
               "@id": "https://satellitecaraudio.com/#website",
-              name: "IX Support",
+              name: "Satellite Car Audio",
               url: "https://satellitecaraudio.com/",
               inLanguage: "en-US",
             },
             {
               "@type": "LocalBusiness",
               "@id": "https://satellitecaraudio.com/#business",
-              name: "IX Support",
+              name: "Satellite Car Audio",
               url: "https://satellitecaraudio.com/",
               description: DESCRIPTION,
               telephone: "+1-800-878-9170",
@@ -61,6 +61,10 @@ export const Route = createFileRoute("/")({
                 addressCountry: "US",
               },
               areaServed: "US",
+              parentOrganization: {
+                "@type": "Organization",
+                name: "IX Support",
+              },
             },
           ],
         }),

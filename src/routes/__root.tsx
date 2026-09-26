@@ -69,31 +69,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "IX Support | No-Cost Satellite Radio Connection Guidance" },
+      { title: "Satellite Car Audio | No-Cost Connection Guidance" },
       {
         name: "description",
         content:
-          "No-cost guidance for eligible new satellite radio connections. IX Support may receive a commission when an eligible connection is completed.",
+          "No-cost guidance for eligible new satellite radio connections from Satellite Car Audio. It may receive a commission when an eligible connection is completed.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:title",
-        content: "IX Support | No-Cost Satellite Radio Connection Guidance",
+        content: "Satellite Car Audio | No-Cost Connection Guidance",
       },
       {
         name: "twitter:title",
-        content: "IX Support | No-Cost Satellite Radio Connection Guidance",
+        content: "Satellite Car Audio | No-Cost Connection Guidance",
       },
       {
         property: "og:description",
         content:
-          "No-cost guidance for eligible new satellite radio connections. IX Support may receive a commission when an eligible connection is completed.",
+          "No-cost guidance for eligible new satellite radio connections from Satellite Car Audio. It may receive a commission when an eligible connection is completed.",
       },
       {
         name: "twitter:description",
         content:
-          "No-cost guidance for eligible new satellite radio connections. IX Support may receive a commission when an eligible connection is completed.",
+          "No-cost guidance for eligible new satellite radio connections from Satellite Car Audio. It may receive a commission when an eligible connection is completed.",
       },
     ],
   }),
