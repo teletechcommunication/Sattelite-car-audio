@@ -1,15 +1,15 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle2, MessageSquareText, ShieldCheck, SignalHigh, Clock, Radio } from "lucide-react";
+import { CheckCircle2, ShieldCheck, SignalHigh, Clock, Radio } from "lucide-react";
 import heroImg from "@/assets/hero-suv-night.jpg";
 import dashImg from "@/assets/dashboard-radio.jpg";
-import { CallButton, Counter, GhostButton, PHONE_DISPLAY, Reveal } from "./primitives";
+import { CallButton, PHONE_DISPLAY, Reveal } from "./primitives";
 
 const FLOATING = [
-  { icon: Radio, title: "Radio Activation", value: "Active", tone: "success" },
-  { icon: SignalHigh, title: "Signal Strength", value: "Excellent", tone: "primary" },
-  { icon: CheckCircle2, title: "Subscription", value: "Verified", tone: "success" },
-  { icon: Clock, title: "Support Line", value: "24/7 Live", tone: "primary" },
+  { icon: Radio, title: "Connection", value: "New service options", tone: "success" },
+  { icon: SignalHigh, title: "Guidance", value: "Next-step help", tone: "primary" },
+  { icon: CheckCircle2, title: "Your cost", value: "No IX Support fee", tone: "success" },
+  { icon: Clock, title: "Disclosure", value: "Commission funded", tone: "primary" },
 ] as const;
 
 export function Hero() {
@@ -37,66 +37,48 @@ export function Hero() {
           <Reveal>
             <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider text-primary-glow uppercase">
               <span className="size-2 rounded-full bg-success" aria-hidden />
-              Live agents standing by
+              No direct customer charge
             </span>
           </Reveal>
 
           <Reveal delay={0.08}>
             <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold sm:text-5xl lg:text-6xl">
-              Satellite radio activation and support,{" "}
-              <span className="text-gradient">handled in one call.</span>
+              Explore satellite radio connection options,{" "}
+              <span className="text-gradient">with clear next steps.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Activate a receiver, refresh a lost signal, review your subscription or sort out
-              billing — our specialists resolve satellite radio issues for car, home, and marine
-              setups in minutes, not days.
+              IX Support helps people explore eligible new satellite radio connections and prepare
+              for the next step. You do not pay IX Support directly. If an eligible new connection
+              is completed, we may receive a commission from the third party that fulfills it.
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <CallButton />
-              <GhostButton>
-                <MessageSquareText className="size-4 text-primary-glow" aria-hidden />
-                Start Live Chat
-              </GhostButton>
+              <CallButton label="Explore Connection Options" />
             </div>
           </Reveal>
 
           <Reveal delay={0.3}>
             <div className="glass mt-8 inline-flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl px-5 py-4">
               <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
-                Toll-Free Support
+                No-Cost Connection Guidance
               </span>
-              <a href="tel:+18008789170" className="font-display text-2xl font-extrabold sm:text-3xl">
+              <a
+                href="tel:+18008789170"
+                className="font-display text-2xl font-extrabold sm:text-3xl"
+              >
                 {PHONE_DISPLAY}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.36}>
-            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
-              {[
-                { v: <Counter to={24} suffix="/7" />, l: "Support Hours" },
-                { v: <Counter to={98} suffix="%" />, l: "First-Call Resolution" },
-                { v: <Counter to={12} suffix="min" />, l: "Avg. Resolution" },
-              ].map((s, i) => (
-                <div key={i} className="glass rounded-2xl px-4 py-4">
-                  <dt className="font-display text-2xl font-extrabold text-primary-glow">{s.v}</dt>
-                  <dd className="mt-1 text-[0.7rem] tracking-wide text-muted-foreground uppercase">
-                    {s.l}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
-
-          <Reveal delay={0.42}>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground">
-              {["Toll-free nationwide", "All radio models", "Secure & confidential"].map((t) => (
+              {["No fee from IX Support", "Commission disclosed", "Phone guidance"].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <ShieldCheck className="size-4 shrink-0 text-primary-glow" aria-hidden />
                   {t}

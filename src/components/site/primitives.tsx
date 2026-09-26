@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export const PHONE_DISPLAY = "(800) 878-9170";
 export const PHONE_HREF = "tel:+18008789170";
-export const BRAND = "Satellite Car Audio";
+export const BRAND = "IX Support";
 
 export function Reveal({
   children,
@@ -79,7 +79,7 @@ export function CallButton({
       href={PHONE_HREF}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
-      aria-label={`Call ${BRAND} support at ${PHONE_DISPLAY}`}
+      aria-label={`Call ${BRAND} at ${PHONE_DISPLAY}`}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] font-semibold text-primary-foreground shadow-glow transition-shadow",
         size === "lg" ? "px-7 py-4 text-base" : "px-5 py-2.5 text-sm",

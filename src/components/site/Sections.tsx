@@ -4,7 +4,6 @@ import {
   BadgePercent,
   CreditCard,
   Headphones,
-  MessageSquareText,
   Power,
   RefreshCw,
   Settings2,
@@ -18,24 +17,44 @@ import interiorImg from "@/assets/interior-ambient.jpg";
 import dashImg from "@/assets/dashboard-radio.jpg";
 import agentImg from "@/assets/support-agent.jpg";
 import marineImg from "@/assets/marine-yacht.jpg";
-import {
-  CallButton,
-  Counter,
-  GhostButton,
-  PHONE_DISPLAY,
-  PHONE_HREF,
-  Reveal,
-  SectionLabel,
-} from "./primitives";
+import { CallButton, Counter, PHONE_DISPLAY, PHONE_HREF, Reveal, SectionLabel } from "./primitives";
 
 const SERVICES = [
-  { icon: Power, title: "Radio Activation", body: "Bring a new or pre-owned receiver online with a guided activation." },
-  { icon: RefreshCw, title: "Signal Refresh", body: "Send a fresh refresh signal when channels drop or show as unavailable." },
-  { icon: CreditCard, title: "Subscription Assistance", body: "Review, change, pause, or renew the plan that fits how you listen." },
-  { icon: BadgePercent, title: "Billing Help", body: "Clarify charges, update payment details, and correct plan pricing." },
-  { icon: Wrench, title: "Installation Guidance", body: "Antenna placement, wiring, and dock setup walkthroughs step by step." },
-  { icon: Settings2, title: "Device Troubleshooting", body: "Diagnose no-signal errors, reception drops, and hardware faults." },
-  { icon: Anchor, title: "Marine Radio Support", body: "Weather-resistant offshore rigs and sea plans configured correctly." },
+  {
+    icon: Power,
+    title: "New Connection Guidance",
+    body: "Talk through whether a new satellite radio connection may fit your setup.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Plan Exploration",
+    body: "Understand the questions to ask when comparing new service options.",
+  },
+  {
+    icon: CreditCard,
+    title: "Eligibility Preparation",
+    body: "Prepare the details a third-party provider may need for a new connection.",
+  },
+  {
+    icon: BadgePercent,
+    title: "No Direct Fee",
+    body: "IX Support does not charge customers directly for this connection guidance.",
+  },
+  {
+    icon: Wrench,
+    title: "Equipment Readiness",
+    body: "Review your receiver, vehicle, and installation details before you connect.",
+  },
+  {
+    icon: Settings2,
+    title: "Next-Step Clarity",
+    body: "Understand what a new connection may require before speaking with a provider.",
+  },
+  {
+    icon: Anchor,
+    title: "Marine Setups",
+    body: "Discuss new connection considerations for compatible marine equipment.",
+  },
 ];
 
 export function StoreSection() {
@@ -57,9 +76,9 @@ export function StoreSection() {
               </div>
               <div className="glass-strong animate-float absolute -right-3 -bottom-8 hidden w-56 rounded-2xl px-5 py-4 sm:block">
                 <p className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">
-                  Hardware &amp; Plans
+                  New Connections
                 </p>
-                <p className="mt-1 font-display text-lg font-extrabold">One support line</p>
+                <p className="mt-1 font-display text-lg font-extrabold">No direct fee</p>
                 <a href={PHONE_HREF} className="mt-1 block text-sm font-semibold text-primary-glow">
                   {PHONE_DISPLAY}
                 </a>
@@ -69,17 +88,19 @@ export function StoreSection() {
 
           <div>
             <Reveal>
-              <SectionLabel>One-Stop Store</SectionLabel>
+              <SectionLabel>Connection Guidance</SectionLabel>
             </Reveal>
             <Reveal delay={0.06}>
               <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
-                Satellite radios and radio plans, supported end to end
+                Start a new connection with clarity
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 max-w-xl text-muted-foreground">
-                Flexible hardware bundles, standalone dashboard receivers, and data packages tailored
-                for automotive, home, and offshore commercial setups. For live help, call{" "}
+                IX Support helps customers explore eligible new satellite radio connections. You do
+                not pay IX Support directly. If an eligible new connection is completed, IX Support
+                may receive a commission from the third party that fulfills it. To discuss your
+                options, call{" "}
                 <a href={PHONE_HREF} className="font-semibold text-foreground">
                   {PHONE_DISPLAY}
                 </a>
@@ -128,38 +149,26 @@ export function InstantHelpSection() {
 
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
         <Reveal>
-          <SectionLabel>Satellite radio not working?</SectionLabel>
+          <SectionLabel>Considering a new connection?</SectionLabel>
         </Reveal>
         <Reveal delay={0.06}>
           <h2 className="mt-6 text-4xl font-extrabold sm:text-5xl lg:text-6xl">
-            <span className="text-gradient">Get instant help now</span>
+            <span className="text-gradient">Understand your connection options</span>
           </h2>
         </Reveal>
+        <Reveal delay={0.12}></Reveal>
         <Reveal delay={0.12}>
-          <motion.span
-            animate={{ scale: [1, 1.03, 1] }}
-            transition={{ duration: 3, repeat: Infinity }}
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 py-2.5 text-sm font-bold text-primary-foreground shadow-glow"
-          >
-            <Sparkles className="size-4" aria-hidden />
-            Save up to 50% on annual plans
-            <span className="rounded-full bg-background/25 px-2.5 py-0.5 text-[0.65rem] tracking-widest uppercase">
-              Limited time
-            </span>
-          </motion.span>
-        </Reveal>
-        <Reveal delay={0.18}>
           <p className="mx-auto mt-7 max-w-2xl text-muted-foreground">
-            Thousands of customers resolve their satellite radio issues every day — channel
-            activation, signal problems, subscription billing and more. Talk to a live agent in
-            seconds.
+            Tell us about your vehicle, receiver, or listening needs. We can help you prepare for a
+            potential new connection with a third-party provider. IX Support does not charge you
+            directly for this guidance.
           </p>
         </Reveal>
 
-        <Reveal delay={0.24}>
+        <Reveal delay={0.18}>
           <div className="glass-strong mx-auto mt-10 max-w-2xl rounded-[2rem] px-6 py-9 sm:px-12">
             <p className="text-[0.7rem] tracking-[0.28em] text-muted-foreground uppercase">
-              Toll-Free Support Number
+              No-Cost Connection Line
             </p>
             <a
               href={PHONE_HREF}
@@ -168,14 +177,10 @@ export function InstantHelpSection() {
               {PHONE_DISPLAY}
             </a>
             <p className="mt-3 text-sm text-primary-glow">
-              Available 24/7 · All radio models · Fast resolution
+              No direct fee · Commission disclosed if a connection is completed
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <CallButton label="Call Now" />
-              <GhostButton>
-                <MessageSquareText className="size-4 text-primary-glow" aria-hidden />
-                Live Chat
-              </GhostButton>
+            <div className="mt-7">
+              <CallButton label="Call IX Support" />
             </div>
           </div>
         </Reveal>
@@ -192,53 +197,19 @@ export function SupportNumberSection() {
           <div className="glass-strong relative overflow-hidden rounded-[2.5rem]">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
               <div className="px-6 py-12 sm:px-12">
-                <SectionLabel>Satellite Radio Support Phone Number</SectionLabel>
+                <SectionLabel>New Connection Phone Number</SectionLabel>
                 <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
-                  One number for activation, signal, billing and plan changes
+                  Talk through a potential new connection
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  The satellite radio customer support number is{" "}
-                  <span className="font-semibold text-foreground">{PHONE_DISPLAY}</span>. Support is
-                  toll free and available 24/7 for all radio models across the United States.
+                  Call <span className="font-semibold text-foreground">{PHONE_DISPLAY}</span> to
+                  explore a potential new satellite radio connection. You are not charged directly
+                  by IX Support. If a connection is completed, IX Support may receive a commission
+                  from the third party that fulfills it.
                 </p>
 
-                <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {[
-                    { v: <Counter to={4.9} decimals={1} />, l: "Satisfaction" },
-                    { v: <Counter to={250} suffix="k+" />, l: "Calls Handled" },
-                    { v: <Counter to={60} suffix="s" />, l: "Avg. Wait" },
-                    { v: <Counter to={100} suffix="%" />, l: "Toll Free" },
-                  ].map((s, i) => (
-                    <div key={i} className="glass rounded-2xl px-4 py-4">
-                      <dt className="font-display text-xl font-extrabold text-primary-glow">
-                        {s.v}
-                      </dt>
-                      <dd className="mt-1 text-[0.65rem] tracking-wide text-muted-foreground uppercase">
-                        {s.l}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-
-                <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
-                  {[
-                    { icon: ShieldCheck, t: "Verified specialists" },
-                    { icon: Headphones, t: "Live agents 24/7" },
-                    { icon: Star, t: "Highly rated service" },
-                  ].map((x) => (
-                    <li key={x.t} className="flex items-center gap-2">
-                      <x.icon className="size-4 shrink-0 text-primary-glow" aria-hidden />
-                      {x.t}
-                    </li>
-                  ))}
-                </ul>
-
                 <div className="mt-9 flex flex-wrap gap-3">
-                  <CallButton />
-                  <GhostButton>
-                    <MessageSquareText className="size-4 text-primary-glow" aria-hidden />
-                    Chat with an agent
-                  </GhostButton>
+                  <CallButton label="Explore Connection Options" />
                 </div>
               </div>
 
@@ -254,8 +225,11 @@ export function SupportNumberSection() {
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--background),transparent_55%)]" />
                 <div className="glass-strong absolute bottom-6 left-6 rounded-2xl px-5 py-4">
                   <p className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="size-2 animate-pulse-ring rounded-full bg-success" aria-hidden />
-                    Agents online now
+                    <span
+                      className="size-2 animate-pulse-ring rounded-full bg-success"
+                      aria-hidden
+                    />
+                    No direct customer fee
                   </p>
                   <a href={PHONE_HREF} className="mt-1 block font-display text-xl font-extrabold">
                     {PHONE_DISPLAY}
@@ -272,7 +246,7 @@ export function SupportNumberSection() {
 
 export function VoucherSection() {
   return (
-    <section id="voucher" className="relative py-16 sm:py-24">
+    <section id="before-you-call" className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2.5rem] border border-primary/30 bg-surface p-1 shadow-glow">
@@ -282,39 +256,22 @@ export function VoucherSection() {
                 transition={{ duration: 2.6, repeat: Infinity }}
                 className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[0.7rem] font-bold tracking-[0.2em] text-primary-glow uppercase"
               >
-                New user offer
+                Clear compensation disclosure
               </motion.span>
-              <h2 className="mt-6 text-3xl font-extrabold sm:text-4xl">
-                Exclusive store discount voucher
-              </h2>
+              <h2 className="mt-6 text-3xl font-extrabold sm:text-4xl">How IX Support is paid</h2>
               <p className="mt-3 text-muted-foreground">
-                Claim the introductory subscription rate when you speak with an agent.
+                IX Support does not charge customers directly. We may receive a commission from a
+                third party when an eligible new connection is completed after our referral.
               </p>
-
-              <div className="mt-8 flex flex-wrap items-end justify-center gap-3">
-                <span className="font-display text-6xl font-extrabold text-gradient">$6</span>
-                <span className="pb-2 text-muted-foreground line-through">Regular price</span>
-              </div>
-              <p className="mt-2 text-sm font-semibold tracking-[0.2em] text-primary-glow uppercase">
-                Get 6 months of access
-              </p>
-
-              <div className="glass mx-auto mt-8 max-w-md rounded-2xl border-dashed px-6 py-4">
-                <p className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">
-                  Voucher code
-                </p>
-                <p className="mt-1 font-display text-xl font-extrabold tracking-[0.35em]">
-                  XM6MONTH6DOLLAR
-                </p>
-              </div>
 
               <p className="mt-5 text-xs text-muted-foreground">
-                Terms and conditions apply. Limited time promotional rate. Call {PHONE_DISPLAY} to
-                redeem. Plans are sold separately from radio hardware.
+                The third-party provider determines pricing, eligibility, promotions, connection
+                approval, and the services it offers. Existing-account questions should be directed
+                to the applicable provider.
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <CallButton label={`Claim Voucher & Call ${PHONE_DISPLAY}`} />
+                <CallButton label={`Call IX Support · ${PHONE_DISPLAY}`} />
               </div>
             </div>
           </div>
@@ -335,22 +292,38 @@ export function MarineSection() {
             </Reveal>
             <Reveal delay={0.06}>
               <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
-                Offshore radios &amp; boat plans
+                Marine connection considerations
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 max-w-xl text-muted-foreground">
-                Water-resistant receivers built to handle marine environments, weather-proof
-                standalone hardware rigs, and dedicated sea plans optimized for deep offshore
-                connection stability.
+                Explore potential new connection considerations for compatible satellite radio
+                equipment used in boats and marine environments. No direct fee is charged by IX
+                Support for this guidance.
               </p>
             </Reveal>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {[
-                { icon: Ship, t: "Weather-proof rigs", d: "Hardware rated for salt, spray, and sun." },
-                { icon: Anchor, t: "Dedicated sea plans", d: "Coverage tuned for offshore routes." },
-                { icon: RefreshCw, t: "Signal stability", d: "Antenna and reception troubleshooting." },
-                { icon: Headphones, t: "Marine specialists", d: "Agents trained on boat installs." },
+                {
+                  icon: Ship,
+                  t: "Equipment details",
+                  d: "Keep the make, model, and installation details ready for a new connection.",
+                },
+                {
+                  icon: Anchor,
+                  t: "Plan questions",
+                  d: "The third-party provider determines plans, coverage, and eligibility.",
+                },
+                {
+                  icon: RefreshCw,
+                  t: "Connection readiness",
+                  d: "Review the installation and receiver details before you connect.",
+                },
+                {
+                  icon: Headphones,
+                  t: "Compensation disclosure",
+                  d: "IX Support may receive a commission after an eligible new connection.",
+                },
               ].map((m, i) => (
                 <Reveal key={m.t} delay={0.06 * i}>
                   <div className="glass h-full rounded-2xl p-5">
@@ -363,7 +336,7 @@ export function MarineSection() {
             </div>
             <Reveal delay={0.24}>
               <div className="mt-9">
-                <CallButton label={`Browse Marine Radios & Plans · ${PHONE_DISPLAY}`} />
+                <CallButton label={`Explore Marine Options · ${PHONE_DISPLAY}`} />
               </div>
             </Reveal>
           </div>

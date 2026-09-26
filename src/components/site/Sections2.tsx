@@ -5,7 +5,6 @@ import {
   ChevronDown,
   CreditCard,
   Headphones,
-  MessageSquareText,
   Phone,
   Power,
   Radio,
@@ -15,25 +14,17 @@ import {
   Wrench,
 } from "lucide-react";
 import ctaImg from "@/assets/final-cta-highway.jpg";
-import {
-  BRAND,
-  CallButton,
-  GhostButton,
-  PHONE_DISPLAY,
-  PHONE_HREF,
-  Reveal,
-  SectionLabel,
-} from "./primitives";
+import { BRAND, CallButton, PHONE_DISPLAY, PHONE_HREF, Reveal, SectionLabel } from "./primitives";
 
 const HUB = [
-  { icon: Power, t: "Radio Activation" },
-  { icon: RefreshCw, t: "Signal Refresh" },
-  { icon: Radio, t: "Subscription Help" },
-  { icon: CreditCard, t: "Billing Support" },
-  { icon: Wrench, t: "Installation Guidance" },
-  { icon: Anchor, t: "Marine Services" },
-  { icon: Settings2, t: "Device Troubleshooting" },
-  { icon: Headphones, t: "Customer Support" },
+  { icon: Power, t: "New Connection" },
+  { icon: RefreshCw, t: "Connection Readiness" },
+  { icon: Radio, t: "Plan Options" },
+  { icon: CreditCard, t: "No Direct Fee" },
+  { icon: Wrench, t: "Equipment Details" },
+  { icon: Anchor, t: "Marine Options" },
+  { icon: Settings2, t: "Eligibility Questions" },
+  { icon: Headphones, t: "How We Are Paid" },
 ];
 
 export function RoutingHub() {
@@ -43,9 +34,9 @@ export function RoutingHub() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal>
           <div className="max-w-2xl">
-            <SectionLabel>Quick Routing Hub</SectionLabel>
+            <SectionLabel>Connection Topics</SectionLabel>
             <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
-              Choose a category and we&apos;ll route your call instantly
+              Explore a new connection with the right information
             </h2>
           </div>
         </Reveal>
@@ -64,7 +55,7 @@ export function RoutingHub() {
                 <span className="mt-6 block">
                   <span className="block text-base font-bold">{h.t}</span>
                   <span className="mt-1 block text-sm text-muted-foreground">
-                    Call {PHONE_DISPLAY}
+                    No direct fee from IX Support
                   </span>
                 </span>
               </motion.a>
@@ -79,28 +70,28 @@ export function RoutingHub() {
 const FAQS = [
   {
     cat: "Contact",
-    q: "What is the satellite radio customer support phone number?",
-    a: `The toll-free satellite radio support phone number is ${PHONE_DISPLAY}. Call ${PHONE_DISPLAY} anytime for radio activation, signal help, billing, and subscription plan questions. Agents are available 24/7.`,
+    q: "Does IX Support charge me directly?",
+    a: "No. IX Support does not charge customers directly for connection guidance provided through this website.",
   },
   {
-    cat: "Activation",
-    q: "How do I activate my satellite radio?",
-    a: `To activate your satellite radio, call ${PHONE_DISPLAY}. A live agent will help activate your radio hardware and set up your subscription. Have your radio ID ready when you call.`,
+    cat: "Compensation",
+    q: "How does IX Support earn money?",
+    a: "If an eligible new connection is completed after a referral through IX Support, we may receive a commission from the third party that fulfills the connection. This does not create a direct customer charge from IX Support.",
   },
   {
-    cat: "Signal",
-    q: "Who do I call for satellite radio signal problems?",
-    a: `For satellite radio signal issues, call ${PHONE_DISPLAY}. Agents assist with no-signal errors, channel reception problems, and antenna troubleshooting for car, home, and marine radios.`,
+    cat: "Connection",
+    q: "What can IX Support help me with?",
+    a: `Call IX Support at ${PHONE_DISPLAY} to discuss potential new satellite radio connections, equipment details, and the next steps a third-party provider may require.`,
   },
   {
-    cat: "Availability",
-    q: "Is satellite radio support available 24/7?",
-    a: `Yes. Support at ${PHONE_DISPLAY} is available 24 hours a day, 7 days a week for all radio models. Call for fast help with activation, signal, billing, and plan changes.`,
+    cat: "Providers",
+    q: "Who completes my connection?",
+    a: "A third-party provider fulfills the connection and determines its own pricing, eligibility, service terms, account approval, and availability. IX Support does not control those decisions.",
   },
   {
-    cat: "Plans",
-    q: "How can I get a discount on satellite radio plans?",
-    a: `New users can claim promotional plan discounts by calling ${PHONE_DISPLAY}. Mention your voucher code when speaking with an agent to apply limited-time rates, including annual plan savings of up to 50%.`,
+    cat: "Existing Accounts",
+    q: "Can IX Support change or fix my existing account?",
+    a: "No. Existing account changes, service issues, billing questions, and provider-specific support are handled by the applicable provider directly.",
   },
 ];
 
@@ -113,10 +104,10 @@ export function Faq() {
           <div className="text-center">
             <SectionLabel>Frequently Asked Questions</SectionLabel>
             <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
-              Quick answers about satellite radio support
+              Quick answers about IX Support
             </h2>
             <p className="mt-4 text-muted-foreground">
-              The primary contact number is{" "}
+              Call IX Support to explore a potential new connection at{" "}
               <a href={PHONE_HREF} className="font-semibold text-foreground">
                 {PHONE_DISPLAY}
               </a>
@@ -193,14 +184,13 @@ export function FinalCta() {
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <Reveal>
           <h2 className="text-4xl font-extrabold sm:text-5xl">
-            Every mile sounds better with the right{" "}
-            <span className="text-gradient">support behind you</span>
+            Start with a clear, <span className="text-gradient">no-cost conversation</span>
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-            One toll-free call connects you to a specialist who can activate, refresh, or fix your
-            satellite radio today.
+            Explore eligible new satellite radio connection options. IX Support does not charge you
+            directly and may receive a commission only when an eligible connection is completed.
           </p>
         </Reveal>
         <Reveal delay={0.14}>
@@ -213,16 +203,17 @@ export function FinalCta() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <CallButton label="Call Now" />
-            <GhostButton>
-              <MessageSquareText className="size-4 text-primary-glow" aria-hidden />
-              Live Chat
-            </GhostButton>
+            <CallButton label="Explore Connection Options" />
           </div>
         </Reveal>
         <Reveal delay={0.26}>
           <ul className="mt-9 flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs text-muted-foreground">
-            {["Toll-free 24/7", "All radio models", "Fast resolution", "Secure support"].map((t) => (
+            {[
+              "No direct IX Support fee",
+              "Commission disclosed",
+              "Provider sets terms",
+              "Connection guidance",
+            ].map((t) => (
               <li key={t} className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-primary-glow" aria-hidden />
                 {t}
@@ -248,8 +239,8 @@ export function Footer() {
               <span className="font-display text-lg font-extrabold">{BRAND}</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Independent support and activation help for satellite radio hardware and plans across
-              automotive, home, and marine setups.
+              No-cost guidance for potential new satellite radio connections. IX Support may receive
+              a commission from a third party when an eligible connection is completed.
             </p>
             <a
               href={PHONE_HREF}
@@ -265,8 +256,8 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
                 { l: "Home", h: "#top" },
-                { l: "Activate Radio", h: "#services" },
-                { l: "Signal Help", h: "#instant-help" },
+                { l: "Connection Options", h: "#services" },
+                { l: "How It Works", h: "#instant-help" },
                 { l: "Marine Division", h: "#marine" },
                 { l: "FAQs", h: "#faq" },
                 { l: "Contact Us", h: "#contact" },
@@ -286,25 +277,28 @@ export function Footer() {
           <div>
             <h2 className="text-xs tracking-[0.2em] text-muted-foreground uppercase">Support</h2>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-              <li>Available 24/7 · United States</li>
+              <li>No direct customer fee · United States</li>
               <li>
                 <a href={PHONE_HREF} className="transition-colors hover:text-foreground">
                   Toll-free: {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
-                <a href="#live-chat" className="transition-colors hover:text-foreground">
-                  Live Chat
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="transition-colors hover:text-foreground">
+                <a href="/privacy/index.html" className="transition-colors hover:text-foreground">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#faq" className="transition-colors hover:text-foreground">
+                <a href="/terms/index.html" className="transition-colors hover:text-foreground">
                   Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/advertising-policy/index.html"
+                  className="transition-colors hover:text-foreground"
+                >
+                  Advertising Transparency
                 </a>
               </li>
             </ul>
@@ -313,10 +307,11 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-7">
           <p className="text-xs leading-relaxed text-muted-foreground">
-            Disclaimer: This webpage operates strictly as an independent consumer information and
-            routing hub service. We are not a corporate retail outlet, commercial store branch, or
-            corporate partner of any provider. All trademarks and trademark names belong completely
-            to their respective owners. For support routing, call {PHONE_DISPLAY}.
+            IX Support, located at 3400 N Alma School Rd, Chandler, AZ 85224-8012, provides no-cost
+            guidance for potential new satellite radio connections. Customers do not pay IX Support
+            directly. IX Support may receive a commission from a third party when an eligible new
+            connection is completed. Provider pricing, eligibility, terms, and service decisions are
+            set by the applicable provider. All trademarks belong to their respective owners.
           </p>
           <p className="mt-4 text-xs text-muted-foreground">
             © {new Date().getFullYear()} {BRAND}. All rights reserved.
